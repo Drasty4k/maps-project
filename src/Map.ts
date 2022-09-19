@@ -25,10 +25,7 @@ export class Map {
   addMarker(mappable: Mappable): void {
     new google.maps.Marker({
       map: this.googleMap,
-      position: {
-        lat: mappable.location.lat,
-        lng: mappable.location.lng,
-      },
+      position: mappable.location,
     });
   }
 }
